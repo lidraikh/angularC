@@ -1,0 +1,16 @@
+<p>
+  details works!
+</p>
+
+<button class="btn btn-blue" (click)="onTogle()">
+  Display Details
+</button>
+
+<p *ngIf="showDetails"> Details are : {{ details }}</p>
+
+<div
+ *ngFor="let logitem of logs; let i =index"
+ [ngStyle]="{backgroundColor: index >= 5 ? 'blue' : 'transparent'}" 
+ [ngClass]="{'white-text': index >= 5}">
+  {{ logitem }}
+</div>
